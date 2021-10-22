@@ -18,21 +18,61 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <h1 id="testClass" class="display-3">Work Day Scheduler</h1>
+      <p class="lead">Plan Ahead & Stay Focused</p>
+      <p id="currentDay" class="lead">moment.js loading...</p>
     </header>
-    <div class="container">
+    <div class="container d-flex flex-column justify-content-center">
       <!-- Timeblocks go here -->
-    </div>
+      <!--5am-->
+      <div
+        id="am5"
+        class="
+          frameHour
+          d-flex
+          flex-row
+          justify-content-between
+          align-items-stretch
+        "
+      >
+        <div class="timeHour p-2">5am</div>
+        <div class="timePlans p-2 text-left">Enter your Plans here...</div>
+        <div class="timeEdit p-2 rounded-lg">EDIT</div>
+      </div>
+      <!--6am-->
+      <div
+        id="am6"
+        class="
+          frameHour
+          d-flex
+          flex-row
+          justify-content-between
+          align-items-stretch
+        "
+      >
+        <div class="timeHour p-2">6am</div>
+        <div class="timePlans p-2 text-left">Enter your Plans here...</div>
+        <div class="timeEdit p-2 rounded-lg">EDIT</div>
+      </div>
+<!-- 
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          rows="3"
+          placeholder="Enter your Plans here..."
+        ></textarea>
+      </div>
+    </div> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

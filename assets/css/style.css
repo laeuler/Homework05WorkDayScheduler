@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -16,9 +16,9 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: crimson;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid crimson;
 }
 
 .description {
@@ -68,4 +68,35 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+/* ============================ New Styling ============================ */
+.frameHour {
+  width: 80%;
+  height: 5em;
+  margin: 2px;
+}
+
+.timeHour,
+.timeEdit {
+  border-top: crimson dashed 2px;
+  width: 10%;
+  max-width: 100px;
+  text-align: center;
+  line-height: 2em;
+  font-size: 2em;
+}
+
+.timePlans {
+  border: crimson dashed 2px;
+  width: 80%;
+}
+
+.timeEdit {
+  background-color: crimson;
+  color: white;
+}
+
+.timeEdit:hover {
+  cursor: pointer;
 }
