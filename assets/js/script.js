@@ -20,14 +20,11 @@ function save(e) {
   //save text in item to local storage
   var plans = $(this).siblings(".timePlans").val();
   var timeOfPlans = $(this).parent().attr("id");
-  //console.log(plans);
-  //save Plans in the respective time slot
-  //if ($(this).text() === "SAVE") {
-  //console.log("you can save it");
-  localStorage.setItem(timeOfPlans, plans); //creates object of time and respective plans
-  //} else {
-  //alert("Slot is already in the past");
-  //}
+  //creates object of time and respective plans
+  localStorage.setItem(timeOfPlans, plans);
+  //Give visual feedback that it was saved
+  $(this).css("color", "#39FF14");
+  setTimeout(assignColor, 500);
 }
 
 //Load all available values for respective time slot
@@ -74,6 +71,8 @@ function assignColor() {
       $(this).children(".timePlans").removeClass("future");
       $(this).children(".timePlans").removeClass("present");
       $(this).children(".timeEdit").text("✓");
+      $(this).children(".timeHour").css("color", "#212529");
+      $(this).children(".timeEdit").css("color", "white");
     } else if (hourSlot === currentTimeSlot) {
       //console.log("slot is now");
       $(this).children(".timePlans").addClass("present");
@@ -81,12 +80,14 @@ function assignColor() {
       $(this).children(".timePlans").removeClass("future");
       $(this).children(".timeEdit").text("SAVE");
       $(this).children(".timeHour").css("color", "crimson");
+      $(this).children(".timeEdit").css("color", "white");
     } else {
       //console.log("slot is in the future");
       $(this).children(".timePlans").addClass("future");
       $(this).children(".timePlans").removeClass("past");
       $(this).children(".timePlans").removeClass("present");
       $(this).children(".timeEdit").text("SAVE");
+      $(this).children(".timeEdit").css("color", "white");
     }
   });
 }
