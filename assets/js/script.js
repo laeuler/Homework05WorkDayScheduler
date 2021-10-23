@@ -1,4 +1,4 @@
-//======================================= Get current Date & Time
+//======================================= Get current Date & Time =======================================
 //Current Date
 var currentDate = moment().format("dddd, MMM Do YYYY");
 
@@ -11,7 +11,7 @@ function getTime() {
   $("#currentDay").text(currentDate + " | " + currentTime);
 }
 
-//======================================= Save and load plans from local storage
+//======================================= Save and load plans from local storage =======================================
 //Save value for respective time slot
 $(".timeEdit").click(save);
 
@@ -22,12 +22,12 @@ function save(e) {
   var timeOfPlans = $(this).parent().attr("id");
   //console.log(plans);
   //save Plans in the respective time slot
-  if ($(this).text() === "SAVE") {
-    console.log("you can save it");
-    localStorage.setItem(timeOfPlans, plans); //creates object of time and respective plans
-  } else {
-    alert("Slot is already in the past");
-  }
+  //if ($(this).text() === "SAVE") {
+  //console.log("you can save it");
+  localStorage.setItem(timeOfPlans, plans); //creates object of time and respective plans
+  //} else {
+  //alert("Slot is already in the past");
+  //}
 }
 
 //Load all available values for respective time slot
@@ -37,7 +37,21 @@ $(".timePlans").each(function () {
   $(this).val(localStorage.getItem(timeGet));
 });
 
-//======================================= Color Coding about the hour of the day
+//clear local storage
+$("#clearAll").click(clearLocal);
+
+//prevent accidental deletion
+function clearLocal() {
+  var proceed = confirm("WARNING! Everything will be deleted. Proceed?");
+
+  if (proceed === true) {
+    localStorage.clear();
+    alert("There is a miracle in every new beginning [Hermann Hesse]");
+  } else {
+    alert("No Worries. Everythings is still here :-)");
+  }
+}
+//======================================= Color Coding =======================================
 //Wrapping function to be called on start and each hour
 function assignColor() {
   //Get the current hour
@@ -74,4 +88,17 @@ function assignColor() {
   });
 }
 
+//trigger color coding every full hour
+var min = moment().minute();
+var sec = moment().second();
+
+setInterval(checkTime, 1000);
+
+function checkTime() {
+  if (min === 0) {
+    assignColor();
+  }
+}
+
+//trigger color coding when page is started
 assignColor();
