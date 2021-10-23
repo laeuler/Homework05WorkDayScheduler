@@ -31,13 +31,15 @@ function save(e) {
 }
 
 //Load all available values for respective time slot
-$(".timePlans").each(function () {
-  var timeGet = $(this).parent().attr("id");
-  //console.log(timeGet);
-  $(this).val(localStorage.getItem(timeGet));
-});
+function loadLocal() {
+  $(".timePlans").each(function () {
+    var timeGet = $(this).parent().attr("id");
+    //console.log(timeGet);
+    $(this).val(localStorage.getItem(timeGet));
+  });
+}
 
-//clear local storage
+//clear local storage event listener
 $("#clearAll").click(clearLocal);
 
 //prevent accidental deletion
@@ -46,6 +48,7 @@ function clearLocal() {
 
   if (proceed === true) {
     localStorage.clear();
+    loadLocal();
     alert("There is a miracle in every new beginning [Hermann Hesse]");
   } else {
     alert("No Worries. Everythings is still here :-)");
@@ -89,16 +92,15 @@ function assignColor() {
 }
 
 //trigger color coding every full hour
-var min = moment().minute();
-var sec = moment().second();
-
 setInterval(checkTime, 1000);
 
 function checkTime() {
+  var min = moment().minute();
   if (min === 0) {
     assignColor();
   }
 }
 
-//trigger color coding when page is started
+//trigger color coding  and loading of local storage when page is started
 assignColor();
+loadLocal();
