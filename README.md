@@ -30,6 +30,11 @@ The following lines describe the logic flow (order in which functions are execut
 - user gets asked if he is really sure about that
 - if the user confirms, the local storage gets cleared (function clearLocal)
 
+### Event: top of the hour
+
+- for the use case that the planner is permanently open on your desktop the color coding would not refresh by itself on default, giving you false visual feedback about the progress of the day
+- once the top of the hour is reached, minutes === 0 is recognized by function checkTime and the function assignColor is triggered to update the indication of the present time slot accordingly
+
 # Mock-Up
 
 The following image shows the web application's appearance and functionality:
