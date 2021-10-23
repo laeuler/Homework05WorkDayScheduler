@@ -20,7 +20,6 @@ textarea {
   border-bottom: 10px solid crimson;
 }
 
-
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -41,7 +40,7 @@ textarea {
   max-width: 100px;
   text-align: center;
   line-height: 2em;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 .timePlans {
@@ -66,12 +65,11 @@ textarea {
 .past {
   background-color: #f0e6e6;
   color: rgb(114, 107, 107);
-
 }
 
 .present {
   background-color: crimson;
-  color: white
+  color: white;
 }
 
 .future {
@@ -80,9 +78,8 @@ textarea {
 }
 
 /* ============================ Button ============================ */
-.btn{
+.btn {
   max-width: 200px;
   margin: 2em;
   background-color: crimson;
 }
-

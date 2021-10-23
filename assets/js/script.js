@@ -16,7 +16,6 @@ function getTime() {
 $(".timeEdit").click(save);
 
 function save(e) {
-  //console.log(this);
   //save text in item to local storage
   var plans = $(this).siblings(".timePlans").val();
   var timeOfPlans = $(this).parent().attr("id");
