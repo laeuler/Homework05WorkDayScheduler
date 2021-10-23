@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <header class="jumbotron">
+    <header class="jumbotron sticky-top">
       <h1 id="testClass" class="display-3">Work Day Scheduler</h1>
       <p class="lead">Plan Ahead & Stay Focused</p>
       <p id="currentDay" class="lead">moment.js loading...</p>
@@ -31,44 +31,107 @@
     <div class="container d-flex flex-column justify-content-center">
       <!-- Timeblocks go here -->
       <!--5am-->
-      <div
-        id="am5"
-        class="
-          frameHour
-          d-flex
-          flex-row
-          justify-content-between
-          align-items-stretch
-        "
-      >
+      <div id="time5" class="timeSlot row">
         <div class="timeHour p-2">5am</div>
-        <div class="timePlans p-2 text-left">Enter your Plans here...</div>
-        <div class="timeEdit p-2 rounded-lg">EDIT</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
       </div>
       <!--6am-->
-      <div
-        id="am6"
-        class="
-          frameHour
-          d-flex
-          flex-row
-          justify-content-between
-          align-items-stretch
-        "
-      >
-        <div class="timeHour p-2">6am</div>
-        <div class="timePlans p-2 text-left">Enter your Plans here...</div>
-        <div class="timeEdit p-2 rounded-lg">EDIT</div>
+      <div id="time6" class="timeSlot row">
+      <div class="timeHour p-2">6am</div>
+      <textarea class="timePlans p-2 text-left"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--7am-->
+      <div id="time7" class="timeSlot row">
+      <div class="timeHour p-2">7am</div>
+      <textarea class="timePlans p-2 text-left"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--8am-->
+      <div id="time8" class="timeSlot row">
+      <div class="timeHour p-2">8am</div>
+      <textarea class="timePlans p-2 text-left past"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--9am-->
+      <div id="time9" class="timeSlot row">
+      <div class="timeHour p-2">9am</div>
+      <textarea class="timePlans p-2 text-left present"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--10am-->
+      <div id="time10" class="timeSlot row">
+      <div class="timeHour p-2">10am</div>
+      <textarea class="timePlans p-2 text-left future"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--11am-->
+      <div id="time11" class="timeSlot row">
+      <div class="timeHour p-2">11am</div>
+      <textarea class="timePlans p-2 text-left"></textarea>
+      <div class="timeEdit p-2 rounded-lg">SAVE</div>
+    </div>
+      <!--12pm-->
+      <div id="time12" class="timeSlot row">
+        <div class="timeHour p-2">12pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
       </div>
-<!-- 
-      <div class="form-group">
-        <textarea
-          class="form-control"
-          rows="3"
-          placeholder="Enter your Plans here..."
-        ></textarea>
+      <!--1pm-->
+      <div id="time13" class="timeSlot row">
+        <div class="timeHour p-2">1pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
       </div>
-    </div> -->
+      <!--2pm-->
+      <div id="time14" class="timeSlot row">
+        <div class="timeHour p-2">2pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--3pm-->
+      <div id="time15" class="timeSlot row">
+        <div class="timeHour p-2">3pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--4pm-->
+      <div id="time16" class="timeSlot row">
+        <div class="timeHour p-2">4pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--5pm-->
+      <div id="time17" class="timeSlot row">
+        <div class="timeHour p-2">5pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--6pm-->
+      <div id="time18" class="timeSlot row">
+        <div class="timeHour p-2">6pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--7pm-->
+      <div id="time19" class="timeSlot row">
+        <div class="timeHour p-2">7pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--8pm-->
+      <div id="time20" class="timeSlot row">
+        <div class="timeHour p-2">8pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
+      <!--9pm-->
+      <div id="time21" class="timeSlot row">
+        <div class="timeHour p-2">9pm</div>
+        <textarea class="timePlans p-2 text-left"></textarea>
+        <div class="timeEdit p-2 rounded-lg">SAVE</div>
+      </div>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

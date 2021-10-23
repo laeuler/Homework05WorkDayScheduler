@@ -15,8 +15,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: crimson;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid crimson;
 }
@@ -42,21 +41,6 @@ textarea {
   border-top: 1px dashed #000000;
 }
 
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -79,7 +63,7 @@ textarea {
 
 .timeHour,
 .timeEdit {
-  border-top: crimson dashed 2px;
+  border-top: #2a5559 dashed 2px;
   width: 10%;
   max-width: 100px;
   text-align: center;
@@ -88,15 +72,36 @@ textarea {
 }
 
 .timePlans {
-  border: crimson dashed 2px;
+  border: #2a5559 dashed 2px;
   width: 80%;
 }
 
 .timeEdit {
-  background-color: crimson;
+  background-color: #2a5559;
   color: white;
 }
 
 .timeEdit:hover {
   cursor: pointer;
+}
+
+.jumbotron {
+  background-color: #2a5559;
+}
+
+/* ============================ Classes for time slot feedback ============================ */
+.past {
+  background-color: #f0e6e6;
+  color: rgb(114, 107, 107);
+
+}
+
+.present {
+  background-color: crimson;
+  color: white
+}
+
+.future {
+  background-color: #bde4bd;
+  color: black;
 }
