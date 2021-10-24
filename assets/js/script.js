@@ -96,7 +96,9 @@ setInterval(checkTime, 1000);
 
 function checkTime() {
   var min = moment().minute();
-  if (min === 0) {
+  var sec = moment().second();
+  //console.log(min + " " + sec)
+  if (min === 0 && sec === 0) {
     assignColor();
   }
 }
