@@ -25,6 +25,7 @@ function save(e) {
   $(this).css("color", "#39FF14");
   setTimeout(assignColor, 500);
 }
+console.log()
 
 //Load all available values for respective time slot
 function loadLocal() {

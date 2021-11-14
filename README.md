@@ -1,13 +1,20 @@
-# Homework05WorkDayScheduler
+# Work-Day-Scheduler
 
-Repo for week 5 assignment
-
-This is the repository to hand in the homework from week 5
+Simple webpage helping you to maintain focus through hourly scheduling. Created with HTML, CSS and JavaScript, leveraging local memory.
 
 # Links to the files
 
 - [GitHub Repository](https://github.com/laeuler/Homework05WorkDayScheduler)
 - [GitHub Page](https://laeuler.github.io/Homework05WorkDayScheduler)
+
+# Technolgies used
+
+- HTML
+- CSS, Bootstrap
+- JavaScript, jQuery
+
+# Contributors
+- Lars Euler: https://github.com/laeuler
 
 # Logic Flow and User Stories
 
@@ -81,3 +88,7 @@ In order to prevent accidental deletion, a dialogue of confirms is initiated
 Looking forward to the feedback
 
 Lars
+
+# License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
